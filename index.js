@@ -285,6 +285,279 @@
 
 
 
+//Functions
+
+// **** Section 5 👉 Functions in JavaScript ****/
+
+// A JavaScript function is a block of code designed to perform a particular task.
+
+
+
+//  Function Definition 
+
+// Before we use a function, we need to define it. 
+
+// A function definition (also called a function declaration, or function statement) 
+// consists of the function keyword, followed by:
+
+// The name of the function.
+// A list of parameters to the function, enclosed in parentheses and separated by commas.
+// The JavaScript statements that define the function, enclosed in curly brackets, {...}.
+
+
+// var a = 10;
+// var b = 20;
+// var sum = a+b;
+// console.log(sum);
+
+
+// function sum(){
+//   var a = 10, b = 40;
+//   var total = a+b;
+//   console.log(total);
+// }
+// // 
+
+// Calling functions
+// Defining a function does not execute it.
+// A JavaScript function is executed when "something" invokes it (calls it).
+
+
+// function sum(){
+//   var a = 10, b = 40;
+//   var total = a+b;
+//   console.log(total);
+// }
+
+// sum();
+
+
+
+//  Function Parameter vs Function Arguments 
+// Function parameters are the names listed in the function's definition. 
+// Function arguments are the real values passed to the function.
+
+
+// function sum(a,b){
+//   var total = a+b;
+//   console.log(total);
+// }
+
+// sum();
+// sum(20,30);
+// sum(50,50);
+// sum(5,6)
+
+
+// Why Functions? 
+
+// You can reuse code: Define the code once, and use it many times.
+// You can use the same code many times with different arguments, 
+// to produce different results.
+
+  // OR
+
+  // A function is a group of reusable code which can be called anywhere 
+// in your program. This eliminates the need of writing the same code 
+// again and again.
+
+// DRY => do not repeat yourself
+
+
+
+
+
+
+//  Function expressions
+// "Function expressions simply means 
+// create a function and put it into the variable "
+
+// function sum(a,b){
+//   var total = a+b;
+//   console.log(total);
+// }
+
+// var funExp = sum(5,15);
+
+
+
+//  Return Keyword
+// When JavaScript reaches a return statement, 
+// the function will stop executing.
+
+// Functions often compute a return value.
+// The return value is "returned" back to the "caller"
+
+
+// function sum(a,b){
+//   return total = a+b;
+// }
+
+// var funExp = sum(5,25);
+
+// console.log('the sum of two no is ' + funExp );
+
+
+//  Anonymous Function
+
+// A function expression is similar to and has the same syntax 
+// as a function declaration One can define "named" 
+// function expressions (where the name of the expression might 
+// be used in the call stack for example) 
+// or "anonymous" function expressions.
+
+
+// var funExp = function(a,b){
+//   return total = a+b;
+// }
+
+// var sum = funExp(15,15);
+// var sum1 = funExp(20,15);
+
+// console.log(sum > sum1 );
+
+
+// ECMA SCRIPT 6
+
+// LET AND CONST AND VAR
+// const myName = "tejas";
+// console.log(myName); 
+
+// myName = 'qyywywyw';
+// console.log(myName);
+
+// function biodata(){
+//   let myName = "tejas tech"
+//   console.log(myName);
+
+//   if(true){
+//     const myProf = 'full stack';
+//     console.log('inner'+ myProf);
+//     console.log('inner'+ myName);
+//   }
+//   console.log('inneOuter'+ myProf);
+// }
+// biodata();
+
+// var =>function Scope
+// let and const =>Block Scope
+
+// Template literals
+// n=12;
+// for (let i=1;i<=10;i++)
+// console.log(`${n}*${i} = ${n*i}`);
+
+// Default parameters
+// Default function parameters allow named parameters to be 
+// initialized with default values if no value or undefined is passed.
+
+// function mult(a,b=5){
+//   return a*b;
+// }
+
+// console.log(mult(3));
+
+
+// Fat Arror Function 
+
+// Normal Way of writing Function  
+
+// console.log(sum()); 
+
+// function sum() {
+//   let a = 5; b = 6;
+//   let sum = a+b;
+//  return `the sum of the two number is ${sum}`;
+// }
+
+// How to convert in into Fat Arrow Function 
+
+//  const sum = () => `the sum of the two number is ${(a=5)+(b=6)}`;
+
+//  console.log(sum()); 
+
+
+//Arrays in js
+
+
+/**** Section 7👉 Arrays in JavaScript  ****/
+
+// When we use var, we can stored only one value at a time. 
+// var friend1 = 'ramesh';
+// var friend2 = 'arjun';
+// var friend3 = 'vishal';
+
+// var myFriends = ['ramesh',22,male,'arjun',20,male,'vishal',true, 52];
+
+// When we feel like storing multiple values in one variable then 
+// instead of var, we will use an Array.
+
+// In JavaScript, we have an Array class, and 
+// arrays are the prototype of this class. 
+
+// example 🏁
+
+
+// var myFriends = ['ramesh',22,male,'arjun',20,male,'vishal',true, 52];
+
+
+
+
+
+// 1️⃣ Array Subsection 1 👉 Traversal in array✌ 
+// navigate through an array
+
+// if we want to get the single data at a time  and also 
+// if we want to change the data 
+
+
+//var myFriends = ['vinod','ramesh','arjun','vishal'];
+
+//console.log(myFriends[myFriends.length - 1])
+//console.log(myFriends.pop())
+// if we want to check the length of elements of an array 
+
+// console.log(myFriends.length);
+
+// we use for loop to navigate 
+
+// var myFriends = ['vinod','ramesh','arjun','vishal'];
+// for(var i=0; i<myFriends.length; i++){
+//   console.log(myFriends[i]);
+// }
+
+// After ES6 we have for..in and for..of loop too 
+
+// var myFriends = ['vinod','ramesh','arjun','vishal'];
+
+// for(let elements in myFriends){
+//   console.log(elements);
+// }
+
+// for in returns the base index value 
+// for of returns the value present in array
+
+// for(let elements of myFriends){
+//   console.log(elements);
+// }
+
+// Array.prototype.forEach() 🙋‍♂️
+// Calls a function for each element in the array.
+
+// var myFriends = ['vinod','ramesh','arjun','vishal'];
+
+// myFriends.forEach(function(element, index, array) {
+//       console.log(element + " index : " +
+//         index + " " + array);
+// });
+
+// myFriends.forEach((element, index, array) => {
+//   console.log(element + " index : " +
+//     index + " " + array);
+// });
+
+
+
 
 
 
